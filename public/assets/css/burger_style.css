@@ -41,6 +41,16 @@ img{
     display: block;
     margin: 0 auto;
 }
-ul{
-    background-color: #fff;
-}
+
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+    
+  }
+  #ul{
+      float:left;
+  }
+  #ul1{
+      float:right;
+  }

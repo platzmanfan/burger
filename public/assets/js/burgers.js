@@ -3,7 +3,12 @@ $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
-  
+      if (newDevour == false){
+        newDevour = true;
+      }else{
+        newDevour =false;
+      }
+
       var newDevourState = {
         devoured: newDevour
       };
@@ -15,7 +20,7 @@ $(function() {
       }).then(
         function() {
           console.log("changed devoured to", newDevour);
-          // Reload the page to get the updated list
+         
           location.reload();
         }
       );

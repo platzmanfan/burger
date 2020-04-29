@@ -1,7 +1,7 @@
 
 <img src="/assets/img/burger.jpg" width="180" height="130">
 <h1>Eat-Da-Burger!</h1>
-<ul>
+<ul id ="ul">
   
   {{#each burgers}}
      {{#unless devoured}}
@@ -11,7 +11,7 @@
 
 </ul>
 
-<ul>  
+<ul id="ul1">  
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=true}}
@@ -19,10 +19,6 @@
   {{/each}}
 </ul>
 
-
-
-condition id = 2
-UPDATE cats SET sleepy=true WHERE id = 2
 
 
 

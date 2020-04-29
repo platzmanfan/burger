@@ -4,6 +4,7 @@
     {{devoured}}
 
     <button class ="change-devoured" data-id="{{id}}" data-newdevour="{{devoured}}">
-              Devour It!
+              {{#if devoured}}Devour it back{{else}}Devour It!{{/if}}
+              
     </button>
 </li>
