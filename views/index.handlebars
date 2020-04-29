@@ -1,9 +1,20 @@
 <h1>Eat-Da-Burger!</h1>
+<li>
+	{{name}}
+
+	<button class="devoured-yes-no" data-id="{{id}}" data-burger="{{burger_name}}">
+		{{#if devoured}}Devour me!{{/if}}
+	</button>
+
+	
+</li>
 
 <ul>
   {{#each burgers}}
-    <li>{{this.burger_name}}</li>
-    <li>{{this.id}}</li>
+        
+          {{>burgers_id}}
+    
+    
   {{/each}}
   
 </ul>
