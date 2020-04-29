@@ -1,20 +1,27 @@
 <h1>Eat-Da-Burger!</h1>
-<li>
-	{{name}}
 
-	<button class="devoured-yes-no" data-id="{{id}}" data-burger="{{burger_name}}">
-		{{#if devoured}}Devour me!{{/if}}
-	</button>
 
-	
-</li>
-
-<ul>
-  {{#each burgers}}
-        
-          {{>burgers_id}}
-    
-    
-  {{/each}}
+<div class="form-group">
   
-</ul>
+  {{#each burgers}}
+     
+      {{> burgers/burger-block devoured=false}}
+  
+  {{/each}}
+
+</div>
+
+
+
+<br><br>
+
+<form class="create-form">
+
+  <div class="form-group">
+    
+    <input type="text" id="burger" name="name">
+    
+  </div>
+  <button type="submit" id="button"> Submit</button>
+  
+</form>

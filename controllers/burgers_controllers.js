@@ -15,17 +15,18 @@ router.get("/",function(req,res){
         var handlebarsObject = {
             burgers: data
         };
-        console.log(handlebarsObject);
-        res.render("index",handlebarsObject);
+        // console.log(handlebarsObject);
+        res.render("index", handlebarsObject);
     });
 });
-router.post("api/burgers", function(req,res){
-    burger.insertOne(["id","burger_name","devoured"],
-    [req.body.id, req.body.burger_name, req.body.devoured], function(response){
-        res.json({id: response.resultId})
+router.post("/api/burgers", function(req,res){
+    burger.insertOne(["burger_name"],
+    [req.body.burger_name], function(response){
+        console.log(req.body.burger_name)
+        res.json({id: response.insertId})
     });
 });
-router.put("api/burgers/:id", function(req,res){
+router.put("/api/burgers/:id", function(req,res){
     var condition = "id" +req.params.id;
     console.log(" + "+ condition);
     burger.updateOne({
@@ -39,3 +40,5 @@ router.put("api/burgers/:id", function(req,res){
         }
     });
 });
+
+module.exports = router;

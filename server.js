@@ -10,9 +10,8 @@ var PORT = process.env.PORT || 8080;
 // getting an express function out of the express package
 var app = express();
 
-app.get('/', function (req, res) {
-    res.render('index');
-});
+// importing the routes from burgers_controllers
+app.use(express.static("public"));
 
 
 
@@ -25,7 +24,8 @@ app.use(express.json());
 app.engine("handlebars", exphbs({defaultLayout:"main"}));
 app.set("view engine" , "handlebars");
 
-
+var routes = require("./controllers/burgers_controllers.js");
+app.use(routes);
 
 app.listen(PORT,function(){
     console.log("BURGER APP IS LISTENING ON PORT " + PORT);

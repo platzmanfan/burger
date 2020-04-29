@@ -35,9 +35,9 @@ function quesMarks(num) {
   }
 var orm = {
     selectAll:function(mysqlString,cb){
-        var query = "SELECT * FROM" + mysqlString + ";";
+        var query = "SELECT * FROM " + mysqlString + ";";
         connection.query(query, function(err,res){
-            if (err) throw err;
+            if (err){ throw err;}
             cb(res);
         })
     },
@@ -45,15 +45,15 @@ var orm = {
     {   
 
         var query = "INSERT INTO " + table;
-        query += "(";
+        query += " (";
         query += col.toString();
-        query += ")";
-        query += "VALUES";
+        query += ") ";
+        query += "VALUES (";
         query += quesMarks(val.length);
-        query += "?";
+        query += ") ";
         console.log(query);
-        connection.query(query ,function(err,res){
-            if (err) throw err;
+        connection.query(query,val,function(err,res){
+            if (err){ throw err;}
             
             cb(res);
         });
@@ -61,10 +61,10 @@ var orm = {
         // We use ? marks because we not know how many elements are gonna be in the table and how many we need to populate!
     },
     updateOne:function(table,val,condition,cb){
-        var query = "UPDATE" + table + "SET";
+        var query = "UPDATE " + table + " SET ";
         
         query += objToSql(val);
-        query += "WHERE";
+        query += "WHERE ";
         query += condition;
         console.log(query)
         connection.query(query, function (err,res){
