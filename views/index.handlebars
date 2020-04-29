@@ -1,15 +1,29 @@
 
 <img src="/assets/img/burger.jpg" width="180" height="130">
 <h1>Eat-Da-Burger!</h1>
-<div class="form-group1">
+<ul>
   
   {{#each burgers}}
-     
+     {{#unless devoured}}
       {{> burgers/burger-block devoured=false}}
-  
+    {{/unless}}
   {{/each}}
 
-</div>
+</ul>
+
+<ul>  
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+
+condition id = 2
+UPDATE cats SET sleepy=true WHERE id = 2
+
 
 
 

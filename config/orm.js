@@ -64,11 +64,11 @@ var orm = {
         var query = "UPDATE " + table + " SET ";
         
         query += objToSql(val);
-        query += "WHERE ";
+        query += " WHERE ";
         query += condition;
         console.log(query)
         connection.query(query, function (err,res){
-            if (err) throw err;
+            if (err) {throw err;}
             cb(res);
         });
     }   
