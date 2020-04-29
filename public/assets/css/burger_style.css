@@ -1,9 +1,38 @@
+
 body{
     background-color: #ffd16e;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
 }
 .label{
     background-color: #fff;
 }
 .change-devoured{
     margin-left:20px;
+}
+#button{
+        background-color:#357eba;
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        width: 100px;
+        
+}
+#burger{
+    text-align: center;
+    height: 50px;
+    width:300px;
+    display: block;
+    margin : 0 auto;
+    margin-bottom: 10px;
+}
+.form-group1{
+    margin-left:80px;
+}
+#paragraph{
+    text-align: center;
+    display:block;
+    margin:0 auto;
 }
