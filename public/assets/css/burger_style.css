@@ -1,9 +1,11 @@
 
 body{
     background-color: #ffd16e;
+    background-image: url("../img/burger_background.jpg")
 }
 .container{
     width:200px;
+    background-position: center;
 }
 h1{
     text-align: center;
@@ -66,7 +68,7 @@ li {
   #ul1{
       float:right;
       width: 200px;
-      color:lightgreen
+      color:red;
       
   }
   .ul2{
