@@ -9,13 +9,14 @@ Creating app using MySql, Node,Express,ORM and Handlebars
 Burger app is an application that takes user input upon the burger they want and it puts it into our database and it shows in the html to the side! Every Burger we created has own button called Devour It!
 Upon clicking on that button it will send the burger to the other side which means it's already been devoured!!
 We can add as many as we want!!! 
+It connects our app with Heroku mysql and database on a server so we can deploy it and also acces our database anywhere!!
 
 We connect this app with mysql workbench but also with JewsDB on heroku!!!
 
 
 #### DEMO
 
-Burger app is deployed to Heroku!  You can see it [here]()
+Burger app is deployed to Heroku!  You can see it [here](https://burgerappdarkoj.herokuapp.com/)
 
 
 #### Installation

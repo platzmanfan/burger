@@ -3,7 +3,7 @@ $(function() {
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
-      if (newDevour == false){
+      if (newDevour === false){
         newDevour = true;
       }else{
         newDevour =false;
