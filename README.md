@@ -31,6 +31,11 @@ npm install for all the packages and you can work on it from your local machine 
 
 #### Technologies i used are :
 
-
-
+* node
+* express
+* handlebars
+* mysql
+* dewDB - on heroku
+* homemade ORM
+* heroku deployment as server
 
